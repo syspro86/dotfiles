@@ -20,3 +20,7 @@ fi
 
 # clone dotfiles
 [ ! -d ~/dotfiles ] && git clone git@github.com:syspro86/dotfiles ~/dotfiles
+
+# gitconfig symlink
+[ ! -f ~/.gitconfig ] && ln -s ~/dotfiles/.gitconfig ~
+

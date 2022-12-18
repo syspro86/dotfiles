@@ -3,4 +3,6 @@
 	email = syspro86@gmail.com
 [pull]
 	rebase = true
+[core]
+	editor = vi
 

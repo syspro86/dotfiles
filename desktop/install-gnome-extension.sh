@@ -7,12 +7,14 @@
 
 sudo apt install wget jq
 
-array=( https://extensions.gnome.org/extension/6/applications-menu/
-https://extensions.gnome.org/extension/2986/runcat/
-https://extensions.gnome.org/extension/2182/noannoyance/
-https://extensions.gnome.org/extension/1460/vitals/
+array=( https://extensions.gnome.org/extension/307/dash-to-dock/
+https://extensions.gnome.org/extension/3088/extension-list/
+https://extensions.gnome.org/extension/13/applications-menu/
 https://extensions.gnome.org/extension/744/hide-activities-button/
-https://extensions.gnome.org/extension/8/places-status-indicator/ )
+https://extensions.gnome.org/extension/2182/noannoyance/
+https://extensions.gnome.org/extension/8/places-status-indicator/ 
+https://extensions.gnome.org/extension/2986/runcat/
+https://extensions.gnome.org/extension/1460/vitals/ )
 
 for i in "${array[@]}"
 do
@@ -26,3 +28,7 @@ do
     gnome-extensions enable ${EXTENSION_ID}
     rm ${EXTENSION_ID}.zip
 done
+
+# disable ubuntu dock
+sudo apt install gnome-shell-extensions dbus-x11
+gnome-extensions disable ubuntu-dock@ubuntu.com

@@ -14,6 +14,7 @@ https://extensions.gnome.org/extension/744/hide-activities-button/
 https://extensions.gnome.org/extension/2182/noannoyance/
 https://extensions.gnome.org/extension/8/places-status-indicator/ 
 https://extensions.gnome.org/extension/2986/runcat/
+https://extensions.gnome.org/extension/5112/tailscale-status/
 https://extensions.gnome.org/extension/1460/vitals/ )
 
 for i in "${array[@]}"

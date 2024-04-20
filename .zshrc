@@ -65,12 +65,20 @@ ZSH_THEME="agnoster"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+ZVM_INIT_MODE=sourcing
+export FZF_BASE=/usr/bin/fzf
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	git
+	zsh-vi-mode
+	fzf
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,8 +107,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-set -o vi
 
 # tabby
 precmd () { echo -n "\x1b]1337;CurrentDir=$(pwd)\x07" }

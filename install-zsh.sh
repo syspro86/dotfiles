@@ -7,15 +7,23 @@ if [ ! -f /usr/bin/zsh ]; then
     chsh -s "$(which zsh)"
 fi
 
+[ ! -f /usr/bin/fzf ] && sudo apt install -y fzf
+
 [ -f ~/.zshrc ] && rm ~/.zshrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc
+
+[ "${ZSH_CUSTOM}" = "" ] && ZSH_CUSTOM=~/.oh-my-zsh/custom
+[ ! -d ${ZSH_CUSTOM}/plugins/zsh-vi-mode ] && echo no ${ZSH_CUSTOM}/plugins/zsh-vi-mode
+[ -d ${ZSH_CUSTOM}/plugins/zsh-vi-mode ] && echo yes ${ZSH_CUSTOM}/plugins/zsh-vi-mode
+[ ! -d ${ZSH_CUSTOM}/plugins/zsh-vi-mode ] && git clone https://github.com/jeffreytse/zsh-vi-mode ${ZSH_CUSTOM}/plugins/zsh-vi-mode
 
 # install d2coding font
 font_wc=$(fc-list | grep 'D2Coding' | wc -l)
 if [ "$font_wc" = "0" ]; then
-    mkdir ~/.local/share/fonts
+    mkdir -p ~/.local/share/fonts
     cd ~/.local/share/fonts
     wget https://github.com/naver/d2codingfont/releases/download/VER1.3.2/D2Coding-Ver1.3.2-20180524.zip
     unzip D2Coding-Ver1.3.2-20180524.zip
+    rm -f D2Coding-Ver1.3.2-20180524.zip
     fc-cache -f -v
 fi

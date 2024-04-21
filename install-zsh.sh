@@ -13,8 +13,6 @@ fi
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 
 [ "${ZSH_CUSTOM}" = "" ] && ZSH_CUSTOM=~/.oh-my-zsh/custom
-[ ! -d ${ZSH_CUSTOM}/plugins/zsh-vi-mode ] && echo no ${ZSH_CUSTOM}/plugins/zsh-vi-mode
-[ -d ${ZSH_CUSTOM}/plugins/zsh-vi-mode ] && echo yes ${ZSH_CUSTOM}/plugins/zsh-vi-mode
 [ ! -d ${ZSH_CUSTOM}/plugins/zsh-vi-mode ] && git clone https://github.com/jeffreytse/zsh-vi-mode ${ZSH_CUSTOM}/plugins/zsh-vi-mode
 
 # install d2coding font

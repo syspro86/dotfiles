@@ -11,6 +11,7 @@ fi
 
 [ -f ~/.zshrc ] && rm ~/.zshrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc
+ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 [ "${ZSH_CUSTOM}" = "" ] && ZSH_CUSTOM=~/.oh-my-zsh/custom
 [ ! -d ${ZSH_CUSTOM}/plugins/zsh-vi-mode ] && git clone https://github.com/jeffreytse/zsh-vi-mode ${ZSH_CUSTOM}/plugins/zsh-vi-mode

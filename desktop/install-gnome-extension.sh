@@ -8,12 +8,10 @@
 sudo apt install wget jq
 
 array=( https://extensions.gnome.org/extension/307/dash-to-dock/
-https://extensions.gnome.org/extension/3088/extension-list/
-https://extensions.gnome.org/extension/13/applications-menu/
 https://extensions.gnome.org/extension/744/hide-activities-button/
 https://extensions.gnome.org/extension/1097/keep-awake/
 https://extensions.gnome.org/extension/2182/noannoyance/
-https://extensions.gnome.org/extension/8/places-status-indicator/ 
+https://extensions.gnome.org//extension/750/openweather/
 https://extensions.gnome.org/extension/2986/runcat/
 https://extensions.gnome.org/extension/5112/tailscale-status/
 https://extensions.gnome.org/extension/1460/vitals/ )

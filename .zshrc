@@ -114,6 +114,11 @@ precmd () { echo -n "\x1b]1337;CurrentDir=$(pwd)\x07" }
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
 
+if [ "$(which nvim)" != "" ]; then
+alias vi=nvim
+alias vim=nvim
+alias vimdiff='nvim -d'
+fi
 #alias vi=vim
 #export PATH="$PATH:/usr/lib/dart/bin"
 

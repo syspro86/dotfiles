@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eu
-[ ! -e $HOME/.ssh/id_rsa.pub ] && ssh-keygen
-GITHUB_PUBKEY=`cat $HOME/.ssh/id_rsa.pub`
+[ ! -e $HOME/.ssh/id_*.pub ] && ssh-keygen
+GITHUB_PUBKEY=`cat $HOME/.ssh/id_*.pub`
 
 # install curl git
 # sudo apt install -y curl git

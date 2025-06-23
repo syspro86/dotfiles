@@ -114,7 +114,7 @@ precmd () { echo -n "\x1b]1337;CurrentDir=$(pwd)\x07" }
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
 
-if [ "$(which nvim)" != "" ]; then
+if [ "$(which nvim)" != "" ] && [ "$(which nvim)" != "nvim not found" ]; then
 alias vi=nvim
 alias vim=nvim
 alias vimdiff='nvim -d'
